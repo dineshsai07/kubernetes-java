@@ -1,0 +1,26 @@
+# namespaces.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: jenkins
+
+---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nexus
+
+---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sonarqube
+
+---
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: monitoring
