@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://your-repo-url.git'
+                git 'https://github.com/dineshsai07/kubernetes-java.git'
             }
         }
         stage('Set Permissions') {
