@@ -8,7 +8,12 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/dineshsai07/kubernetes-java.git'
+                git 'https://your-repo-url.git'
+            }
+        }
+        stage('Set Permissions') {
+            steps {
+                sh 'chmod +x mvnw'
             }
         }
         stage('Lint') {
@@ -30,6 +35,8 @@ pipeline {
                 script {
                     sh './mvnw test'
                 }
+                // Archive test results
+                junit '**/target/surefire-reports/*.xml'
             }
         }
         stage('Code Coverage') {
