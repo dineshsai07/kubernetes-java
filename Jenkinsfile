@@ -36,7 +36,7 @@ pipeline {
                     sh './mvnw test'
                 }
                 // Archive test results
-                junit '**/target/surefire-reports/*.xml'
+                junit 'target/surefire-reports/*.xml'
             }
         }
         stage('Code Coverage') {
